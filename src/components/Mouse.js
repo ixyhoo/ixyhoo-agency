@@ -11,7 +11,6 @@ const Mouse = () => {
         cursor.style.left = e.x + "px";
         });
          document.querySelectorAll(".hover").forEach((link) => {
-        
                 link.addEventListener("mouseover", () => {
                      cursor.classList.add("hovered");
                 });
