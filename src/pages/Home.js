@@ -9,6 +9,11 @@ const Home = () => {
             <Mouse />
             <Navigation />
             <SocialNetwork />
+            <div className="home-main">
+                <div className="main-content">
+                    <h1>IxyhOO Agency</h1>
+                </div>
+            </div>
            
         </div>
     );
