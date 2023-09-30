@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const DynamicText = () => {
+
+    useEffect(() => {
+     let array = ["site", "Web", "&", "Appli"];  
+     let wordIndex = 0;       
+    }, []);
     return (
-        <div>
-            <h2>texte</h2>
-        </div>
-    );
+        <span className="dynamic-text">
+            <span>Créateur de</span>
+            <span id='text-target' ></span>
+        </span>
+        );
 };
 
 export default DynamicText;
