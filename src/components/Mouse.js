@@ -4,18 +4,23 @@ import React, { useEffect } from 'react';
 const Mouse = () => {
 
     useEffect(() => {
-    const cursor = document.querySelector(".cursor");
-    window.addEventListener("mousemove", (e) => {
-        cursor.style.left = e.X + "px";
-        cursor.style.top = e.Y + "px";
-    });
-    document.querySelectorAll(".hover").forEach((link) => {
+     const cursor = document.querySelector(".cursor");
+
+        window.addEventListener("mousemove", (e) => {
+        cursor.style.top = e.y + "px";
+        cursor.style.left = e.x + "px";
+        });
+         document.querySelectorAll(".hover").forEach((link) => {
         
-        link.addEventListener("mouseover", () => {
-            cursor.classList.add("hovered");
-        });
-        });
-    }, []);
+                link.addEventListener("mouseover", () => {
+                     cursor.classList.add("hovered");
+                });
+                link.addEventListener("mouseleave", () => {
+                    cursor.style.transition =
+                     cursor.classList.remove("hovered");
+                });
+            });
+}, []);
     return <span className="cursor"></span>;
 };
 
